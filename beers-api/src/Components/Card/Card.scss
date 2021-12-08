@@ -1,0 +1,18 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    align-items: center;
+    height: 100%;
+
+    &__img{
+        width: 25%;
+        height: 50%;
+    }
+    &__stats{
+    display: flex;
+    width: 100%;
+    font-size: 10px;
+    justify-content: space-evenly;
+    }
+}
