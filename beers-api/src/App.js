@@ -42,11 +42,12 @@ const handleSearch = (e) => {
 const handleFilterFetch = (e) => {
   console.log("handleFilterFetch has run!")
   const checkType = e.target.value;
-  // if (fetchParam) {
-  //   let newFetchParam = fetchParam
-  //   // console.log(newFetchParam)
-  //   setFetchParam(newFetchParam)
-  // }
+  if (fetchParam) {
+    let newFetchParam = fetchParam
+    newFetchParam += "&"
+    // console.log(newFetchParam)
+    setFetchParam(newFetchParam)
+  }
   if (checkType === "> 6.0%") {
     let newFetchParam = "?abv_gt=6"
   setFetchParam(newFetchParam)
@@ -64,20 +65,9 @@ const handleFilterFetch = (e) => {
   console.log(typeof fetchParam)
 }
 
-// useEffect(() => {
-//     //Use string interpolation to add a varaible to the endpoint request
-//     const URL = `https://api.punkapi.com/v2/beers`
-//     fetch(URL) 
-//     .then(res => res.json())
-//     .then(data => {
-//         setBeersData(data)
-//           })
-//       .catch(console.log("There has been an error"))
-//     },[])
-
     useEffect(() => {
     //Use string interpolation to add a varaible to the endpoint request
-    const URL = `https://api.punkapi.com/v2/beers${fetchParam}`
+    const URL = `https://api.punkapi.com/v2/beers` + fetchParam
     fetch(URL) 
     .then(res => res.json())
     .then(data => {
