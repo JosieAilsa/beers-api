@@ -1,9 +1,9 @@
 import FiltersItem from "../FiltersItem/FiltersItem";
-const FilterList = ({handleFilter}) => {
+const FilterList = ({handleFilterFetch}) => {
     return ( 
         <>
         <form action="">
-            <FiltersItem handeFilter ={handleFilter}/>
+            <FiltersItem handleFilterFetch ={handleFilterFetch} />
         </form>
         </>
      );

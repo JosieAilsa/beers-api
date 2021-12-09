@@ -2,10 +2,10 @@ import SearchBox from "../SearchBox/SearchBox";
 import FiltersList from "../FiltersList/FiltersList";
 import "./Navbar.scss"
 
-const Navbar = ({handleSearch, handleFilter}) => {
+const Navbar = ({handleSearch, handleFilterFetch}) => {
     return (<>
     <div className = "nav"> 
-    <FiltersList handleFilter = {handleFilter}/>
+    <FiltersList handleFilterFetch = {handleFilterFetch}/>
     <SearchBox handleSearch = {handleSearch}/>  
     </div> 
     </>);
